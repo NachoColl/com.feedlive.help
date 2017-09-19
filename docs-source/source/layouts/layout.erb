@@ -1,0 +1,120 @@
+<% language_tabs = current_page.data.language_tabs || [] %>
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9 en no-focus"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="en no-focus">
+  
+<!--<![endif]-->
+<head itemscope itemtype="http://schema.org/WebSite">
+  
+  <title itemprop='name'>FeedLive.com - Connect Your World</title>
+ 
+  <!-- charset -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+  
+  <!-- page cache -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  
+  <!-- canonical -->
+  <link rel="canonical" href="https://www.feedlive.com" itemprop="url" />
+  
+  <!-- google search -->
+  <meta name="robots" content="all">
+  <meta name="googlebot" content="all" />
+  <meta name="google" content="notranslate" />
+  <meta name="google" content="nositelinkssearchbox" />
+  <meta name="author" content="Nacho Coll" />
+  <meta name="description" content="FeedLive is a service that parents can use to enforce family communication and child protection." itemprop='description' />
+  <meta name="keywords" content="family protection, gps tracker, family tracker, chat" itemprop='keywords' />
+  
+
+  <!-- http://ogp.me/, Open Graph -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Connect your world" />
+  <meta property="og:description" content="FeedLive is a service that parents can use to enforce family communication and child protection." />
+  <meta property="og:url" content="https://www.feedlive.com" />
+  <meta property="og:image" content="http://www.feedlive.com/images/feedlive_join_group.jpg" />
+  <meta property="og:image:secure_url" content="https://www.feedlive.com/images/feedlive_join_group.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="533" />
+  
+  <!-- icon -->
+  <link rel="shortcut icon" href="https://d2m9ia44cpx81c.cloudfront.net/images/favicon.png" />
+  
+    <style>
+      <%= Rouge::Themes::Base16::Monokai.render(:scope => '.highlight') %>
+    </style>
+    <%= stylesheet_link_tag :screen, media: :screen %>
+    <%= stylesheet_link_tag :print, media: :print %>
+    <% if current_page.data.search %>
+      <%= javascript_include_tag  "all" %>
+    <% else %>
+      <%= javascript_include_tag  "all_nosearch" %>
+    <% end %>
+  </head>
+
+  <body class="<%= page_classes %>" data-languages="<%=h language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <%= image_tag('navbar.png') %>
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+	  <ul class="tocify-header" style="font-size:1em; margin-left: -5px; margin-top: 2px;"><li class="tocify-item tocify-focus"><a class="pull-left hidden-sm hidden-xs" style="line-height: 54px; "><span style="">&nbsp;www.feedlive.com</span></a> </li></ul>
+      <% if language_tabs.any? %>
+        <div class="lang-selector">
+          <% language_tabs.each do |lang| %>
+            <% if lang.is_a? Hash %>
+              <a href="#" data-language-name="<%= lang.keys.first %>"><%= lang.values.first %></a>
+            <% else %>
+              <a href="#" data-language-name="<%= lang %>"><%= lang %></a>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+      <% if current_page.data.search %>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <% end %>
+      <div id="toc">
+      </div>
+      <% if current_page.data.toc_footers %>
+        <ul class="toc-footer">
+          <% current_page.data.toc_footers.each do |footer| %>
+            <li><%= footer %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <%= yield %>
+        <% current_page.data.includes && current_page.data.includes.each do |include| %>
+          <%= partial "includes/#{include}" %>
+        <% end %>
+      </div>
+      <div class="dark-box">
+        <% if language_tabs.any? %>
+          <div class="lang-selector">
+            <% language_tabs.each do |lang| %>
+              <% if lang.is_a? Hash %>
+                <a href="#" data-language-name="<%= lang.keys.first %>"><%= lang.values.first %></a>
+              <% else %>
+                <a href="#" data-language-name="<%= lang %>"><%= lang %></a>
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </body>
+</html>
