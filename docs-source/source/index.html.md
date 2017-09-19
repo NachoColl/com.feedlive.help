@@ -115,8 +115,13 @@ Location is older than 30 minutes.
 
 Location is older than 5 hours.
 
+# Get Support
+
+If you have any question/request/issue/etc, please just write a new Issue [here](https://github.com/NachoColl/com.feedlive.help/issues).
 
 <br/>
 <br/>
 <br/>
------- end.
+<br/>
+<br/>
+------ The End.
