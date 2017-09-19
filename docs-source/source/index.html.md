@@ -11,7 +11,7 @@ search: false
 Online documentation for FeedLive version 0.6  
 ```
 
-[FeedLive](https://www.feedlive.com) is a service that parents can use to enforce family communication and child protection. 
+[FeedLive](http://www.feedlive.com) is a service that parents can use to enforce family communication and child protection. 
 
 
 ## Version Notes
