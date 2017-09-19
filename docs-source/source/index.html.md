@@ -124,4 +124,4 @@ If you have any question/request/issue/etc, please just write a new Issue [here]
 <br/>
 <br/>
 <br/>
------- The End.
+ Crafted with <i class="fa fa-heart blue"></i> by <a href="http://nachocoll.website/" class="red" target="_blank">Nacho Coll</a>
