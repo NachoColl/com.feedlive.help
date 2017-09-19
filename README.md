@@ -1,8 +1,8 @@
-# "mustache.website" help pages
+# "FeedLive.com" help pages
 
-Some help documentation on how to use mustache.website for your Email Marketing and Landing Page needs. 
+Some help documentation on how to use FeedLive. 
 
-You can browse the docs at [mustache.website](https://mustache.website/help/index.html)
+You can browse the docs at [www.FeedLive.com](http://www.feedlive.com)
 
 ## How to report issues.
 
