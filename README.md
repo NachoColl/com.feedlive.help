@@ -1,6 +1,6 @@
 # "FeedLive.com" help pages
 
-Some help documentation on how to use FeedLive. 
+FeedLive mobile app help docs repository.
 
 You can browse the docs at [www.FeedLive.com](http://www.feedlive.com)
 
