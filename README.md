@@ -2,7 +2,7 @@
 
 FeedLive mobile app help docs repository.
 
-You can browse the docs at [www.FeedLive.com](http://www.feedlive.com)
+You can browse the docs at [help.FeedLive.com](http://help.feedlive.com)
 
 ## How to report issues.
 
